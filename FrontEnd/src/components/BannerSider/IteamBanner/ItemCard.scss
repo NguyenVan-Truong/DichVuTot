@@ -1,0 +1,79 @@
+.itemcard {
+  width: 1200px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 15px;
+  .item {
+    border: 1px solid #e8e8e8;
+    border-radius: 15px;
+    margin: 10px;
+    width: 230px;
+    height: 350px;
+    // position: relative;
+    .itemStar {
+      display: flex;
+      margin-top: 5px;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .description {
+      text-align: left;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .price {
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50%;
+  width: 40px;
+  height: 25px;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  cursor: pointer;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  content: none; /* Ẩn icon mặc định của react-slick */
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev svg,
+.slick-next svg {
+  font-size: 20px;
+  color: white; /* Màu sắc của icon */
+}
+@media screen and (max-width: 1200px) {
+  .itemcard {
+    width: 1130px;
+    margin: 5px;
+    .item {
+      width: 210px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      // margin: ;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.bannerSlider {
+  display: flex;
+  background: red;
+  gap: 15px;
+  border-radius: 15px;
+}
+.bannerLeft {
+  font-weight: 900;
+  font-size: 35px;
+  display: flex;
+  margin-left: 23px;
+  text-align: center;
+  align-items: center;
+  color: white;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 8px 8px 16px rgba(0, 0, 0, 0.3),
+    12px 12px 24px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 1200px) {
+  .bannerSlider {
+    gap: 1px;
+  }
+  .bannerLeft {
+    display: none;
+  }
+}

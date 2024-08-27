@@ -1,0 +1,57 @@
+.banner {
+  display: flex;
+  z-index: 1;
+
+  .banner-left {
+    width: 900px;
+    margin-top: 5px;
+    position: relative; // Đảm bảo các nút điều hướng nằm trong phạm vi của slider
+    img {
+      border-radius: 20px;
+    }
+
+    // Các nút điều hướng tùy chỉnh
+    .slick-prev,
+    .slick-next {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    // Hiển thị các nút điều hướng khi hover
+    &:hover {
+      .slick-prev,
+      .slick-next {
+        opacity: 1;
+      }
+    }
+  }
+
+  .banner-right {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    gap: 5px;
+    img {
+      width: 445px;
+      height: 100%;
+      border-radius: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .banner {
+    .banner-left {
+      width: 750px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .banner-right {
+      width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
