@@ -125,12 +125,12 @@ const products = [
 
 const SliderTwo: React.FC = () => {
     return (
-        <div style={{ width: '1350px', backgroundColor: 'white', borderRadius: '15px' }}>
+        <div className='main'>
             <Slider {...settings}>
                 {products.map(product => (
                     <div key={product.id}>
                         <div className='item'>
-                            <img src={product.image} alt={product.name} width={150} style={{ marginLeft: '35px' }} />
+                            <img src={product.image} alt={product.name} width={135} style={{ marginLeft: '35px' }} />
                             <div className='itemStar'>
                                 <div style={{ color: 'gold', fontSize: '12px' }}>
                                     {[...Array(5)].map((_, index) => (

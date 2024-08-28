@@ -44,10 +44,10 @@ const Banner = () => {
         <div className='banner'>
             <Slider {...settings} className='banner-left'>
                 <div>
-                    <img src={banner} alt="" width={900} />
+                    <img src={banner} alt="" />
                 </div>
                 <div>
-                    <img src={banner1} alt="" width={900} />
+                    <img src={banner1} alt="" />
                 </div>
             </Slider>
             <div className='banner-right'>

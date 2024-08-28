@@ -1,15 +1,16 @@
 .itemcard {
-  width: 1200px;
+  width: 85%;
   background-color: white;
   margin: 10px;
   border-radius: 15px;
+  position: relative;
   .item {
     border: 1px solid #e8e8e8;
     border-radius: 15px;
-    margin: 10px;
-    width: 230px;
+    margin: 5px;
+    width: 220px;
     height: 350px;
-    // position: relative;
+
     .itemStar {
       display: flex;
       margin-top: 5px;

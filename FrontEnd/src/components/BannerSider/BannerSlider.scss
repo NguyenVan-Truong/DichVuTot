@@ -3,8 +3,10 @@
   background: red;
   gap: 15px;
   border-radius: 15px;
+  justify-content: space-between;
 }
 .bannerLeft {
+  width: 10%;
   font-weight: 900;
   font-size: 35px;
   display: flex;

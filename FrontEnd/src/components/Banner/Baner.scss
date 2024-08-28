@@ -1,23 +1,24 @@
 .banner {
   display: flex;
   z-index: 1;
+  justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần */
 
   .banner-left {
-    width: 900px;
+    width: 65%; /* Thay đổi từ pixel sang phần trăm */
     margin-top: 5px;
-    position: relative; // Đảm bảo các nút điều hướng nằm trong phạm vi của slider
+    margin-right: 5px;
+    position: relative;
     img {
       border-radius: 20px;
+      width: 100%;
     }
 
-    // Các nút điều hướng tùy chỉnh
     .slick-prev,
     .slick-next {
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
-    // Hiển thị các nút điều hướng khi hover
     &:hover {
       .slick-prev,
       .slick-next {
@@ -27,31 +28,42 @@
   }
 
   .banner-right {
+    width: 32%; /* Thay đổi từ pixel sang phần trăm */
     display: flex;
     flex-direction: column;
     margin: 5px;
-    gap: 5px;
+    gap: 15px;
     img {
-      width: 445px;
-      height: 100%;
+      width: 100%;
       border-radius: 20px;
     }
   }
 }
+
 @media screen and (max-width: 1200px) {
   .banner {
+    flex-direction: row; /* Đảm bảo vẫn là hàng ngang */
+
     .banner-left {
-      width: 750px;
-      img {
-        width: 100%;
-      }
+      width: 65%; /* Cả hai phần cùng giảm kích thước */
+      margin-right: 10px;
     }
 
     .banner-right {
-      width: 400px;
-      img {
-        width: 100%;
-      }
+      width: 31%; /* Điều chỉnh tỷ lệ phần trăm tương tự bên trái */
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    flex-direction: column; /* Chuyển sang dạng cột cho màn hình nhỏ */
+    align-items: center;
+
+    .banner-left,
+    .banner-right {
+      width: 90%; /* Cả hai phần chiếm 90% chiều rộng màn hình */
+      margin: 10px 0;
     }
   }
 }
