@@ -21,7 +21,7 @@ const HeaderBottom = () => {
                     <FaMobileAlt style={{ fontSize: '24px', color: 'white' }} />
                     <span>SỬA CHỮA ĐIỆN THOẠI</span>
                 </div>
-                <div className='dropdown-content' style={{ top: '100%', left: '-190px', }}>
+                <div className='dropdown-content' style={{ top: '100%', left: '-185px', }}>
                     <Dropdown />
                 </div>
             </div>
@@ -31,7 +31,7 @@ const HeaderBottom = () => {
                     <FaTools style={{ fontSize: '24px', color: 'white' }} />
                     <span>SỬA CHỮA LINH KIỆN</span>
                 </div>
-                <div className='dropdown-content' style={{ top: '100%', left: '-370px' }}>
+                <div className='dropdown-content' style={{ top: '100%', left: '-360px' }}>
                     <Dropdown />
                 </div>
             </div>
@@ -41,7 +41,7 @@ const HeaderBottom = () => {
                     <FaCogs style={{ fontSize: '24px', color: 'white' }} />
                     <span>THAY THẾ LINH KIỆN</span>
                 </div>
-                <div className='dropdown-content' style={{ top: '100%', left: '-540px' }}>
+                <div className='dropdown-content' style={{ top: '100%', left: '-535px' }}>
                     <Dropdown />
                 </div>
             </div>
@@ -71,7 +71,7 @@ const HeaderBottom = () => {
                     <FaShieldAlt style={{ fontSize: '24px', color: 'white' }} />
                     <span>BẢO HÀNH MỞ RỘNG</span>
                 </div>
-                <div className='dropdown-content' style={{ top: '100%', left: '-1065px' }}>
+                <div className='dropdown-content' style={{ top: '100%', left: '-1060px' }}>
                     <Dropdown />
                 </div>
             </div>

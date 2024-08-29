@@ -2,12 +2,13 @@
   width: 100%;
   background-color: white;
   border-radius: 15px;
+  gap: 15px;
   .item {
     border: 1px solid #c6bebe;
     border-radius: 15px;
-    margin: 5px;
-    width: 220px;
+    width: 225px;
     height: 370px;
+    margin-top: 15px;
     position: relative;
     .itemStar {
       display: flex;

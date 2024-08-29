@@ -39,7 +39,7 @@ const CustomNextArrow = (props: any) => {
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
             >
-                <FaChevronRight style={{ color: hover ? 'white' : 'black', fontSize: '30px', marginLeft: '15px', marginTop: '20px' }} />
+                <FaChevronRight style={{ color: hover ? 'white' : 'black', fontSize: '30px', marginLeft: '5px', marginTop: '20px' }} />
             </div>
         )
     );
@@ -144,11 +144,11 @@ const ItemCard: React.FC = () => {
 
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 5,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
         prevArrow: <CustomPrevArrow isHidden={currentSlide === 0} />,
         nextArrow: <CustomNextArrow isHidden={currentSlide >= totalSlides - 5} />,
         slidesToScroll: 5,
