@@ -34,36 +34,43 @@
   }
 }
 
-.slick-prev,
-.slick-next {
+.slick-prev {
+  background-color: gray;
+  border-top-right-radius: 35%;
+  border-bottom-right-radius: 35%;
+  width: 40px;
+  height: 65px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  z-index: 1;
-  padding: 10px;
-  width: 60px;
-  background-color: yellow;
-  // height: px;
-  padding: 10px;
-  display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  cursor: pointer;
+  z-index: 2;
+  margin-left: 25px;
+  &:hover {
+    background-color: red;
+  }
 }
 
+.slick-next {
+  background-color: gray;
+  border-top-left-radius: 35%;
+  border-bottom-left-radius: 35%;
+  width: 40px;
+  height: 65px;
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transform: translatex(-50%);
+  &:hover {
+    background-color: red;
+  }
+}
+.className {
+  padding-right: -10px;
+}
 .slick-prev::before,
 .slick-next::before {
   content: none; /* Ẩn icon mặc định của react-slick */
-}
-
-.slick-prev {
-  left: 0px;
-  color: black;
-  // padding: 25px;
-}
-
-.slick-next {
-  right: 10px;
 }
 
 @media screen and (max-width: 1200px) {

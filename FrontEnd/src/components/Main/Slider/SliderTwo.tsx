@@ -1,5 +1,5 @@
 // ItemCard.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import { FaChevronLeft, FaChevronRight, FaStar } from 'react-icons/fa';
 import './Slider.scss';
@@ -9,24 +9,30 @@ import sanpham1 from '../../../assets/Images/sanpham7.jpg';
 
 const CustomPrevArrow = (props: any) => {
     const { className, onClick } = props;
+    const [hover, setHover] = useState(false);
     return (
         <div
             className={className}
             onClick={onClick}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
         >
-            <FaChevronLeft style={{ color: 'black', fontSize: '30px' }} />
+            <FaChevronLeft style={{ color: hover ? 'white' : 'black', fontSize: '30px', marginLeft: '5px', marginTop: '20px' }} />
         </div>
     );
 }
 
 const CustomNextArrow = (props: any) => {
     const { className, onClick } = props;
+    const [hover, setHover] = useState(false);
     return (
         <div
             className={className}
             onClick={onClick}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
         >
-            <FaChevronRight style={{ color: 'black', fontSize: '30px' }} />
+            <FaChevronRight style={{ color: hover ? 'white' : 'black', fontSize: '30px', marginLeft: '5px', marginTop: '20px' }} />
         </div>
     );
 }

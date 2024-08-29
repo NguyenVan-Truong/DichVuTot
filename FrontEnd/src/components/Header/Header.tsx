@@ -33,7 +33,7 @@ const Header = () => {
 
                 {/* <span className='cart'><FaShoppingCart style={{ fontSize: '15px', color: 'white' }} /> Giỏ hàng</span> */}
                 <Dropdown overlay={menu} trigger={['click']}>
-                    <Button className='button' variant="filled" size="xs" radius="md" leftSection={<FaShoppingCart size={20} />} >
+                    <Button className='button' variant="filled" size="xs" radius="md" leftSection={<FaShoppingCart size={20} style={{ fontWeight: 'bold' }} />} >
                         Giỏ hàng
                     </Button>
                 </Dropdown>

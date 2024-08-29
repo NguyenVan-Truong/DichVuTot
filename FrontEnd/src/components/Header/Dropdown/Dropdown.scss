@@ -1,0 +1,28 @@
+.dropdown {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  .dropdown__COntent {
+    .text {
+      padding-bottom: 5px;
+      border-bottom: 1px solid red;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        padding: 5px 0;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: black;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

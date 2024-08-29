@@ -6,7 +6,7 @@
     border: 1px solid #c6bebe;
     border-radius: 15px;
     margin: 5px;
-    width: 200px;
+    width: 220px;
     height: 370px;
     position: relative;
     .itemStar {
@@ -31,20 +31,36 @@
     box-shadow: 0 0 10px 0 rgba(105, 105, 105, 0.396);
   }
 
-  .slick-prev,
-  .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    border-radius: 50%;
+  .slick-prev {
+    background-color: gray;
+    border-top-right-radius: 35%;
+    border-bottom-right-radius: 35%;
     width: 40px;
-    height: 25px;
-    padding: 10px;
-    display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    cursor: pointer;
+    height: 65px;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 2;
+    margin-left: -5px;
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  .slick-next {
+    background-color: gray;
+    border-top-left-radius: 35%;
+    border-bottom-left-radius: 35%;
+    width: 40px;
+    height: 65px;
+    position: absolute;
+    top: 55%;
+    margin-right: -5px;
+    transform: translateY(-50%);
+    z-index: 2;
+    &:hover {
+      background-color: red;
+    }
   }
 
   .slick-prev::before,

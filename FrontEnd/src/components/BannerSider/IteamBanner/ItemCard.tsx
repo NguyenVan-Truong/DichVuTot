@@ -1,5 +1,4 @@
-// ItemCard.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import { FaCheck, FaChevronLeft, FaChevronRight, FaStar } from 'react-icons/fa';
 import './ItemCard.scss';
@@ -12,59 +11,39 @@ import sanpham4 from '../../../assets/Images/sanpham4.jpg';
 import sanpham5 from '../../../assets/Images/sanpham5.jpg';
 import sanpham6 from '../../../assets/Images/sanpham6.jpg';
 
-
 const CustomPrevArrow = (props: any) => {
-    const { className, onClick } = props;
+    const { className, onClick, isHidden } = props;
+    const [hover, setHover] = useState(false);
     return (
-        <div
-            className={className}
-            onClick={onClick}
-        >
-            <FaChevronLeft style={{ color: 'black', fontSize: '30px' }} />
-        </div>
+        !isHidden && (
+            <div
+                className={className}
+                onClick={onClick}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+            >
+                <FaChevronLeft style={{ color: hover ? 'white' : 'black', fontSize: '30px', marginLeft: '5px', marginTop: '20px' }} />
+            </div>
+        )
     );
 }
 
 const CustomNextArrow = (props: any) => {
-    const { className, onClick } = props;
+    const { className, onClick, isHidden } = props;
+    const [hover, setHover] = useState(false);
     return (
-        <div
-            className={className}
-            onClick={onClick}
-        >
-            <FaChevronRight style={{ color: 'black', fontSize: '30px' }} />
-        </div>
+        !isHidden && (
+            <div
+                className={className}
+                onClick={onClick}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+            >
+                <FaChevronRight style={{ color: hover ? 'white' : 'black', fontSize: '30px', marginLeft: '15px', marginTop: '20px' }} />
+            </div>
+        )
     );
 }
-const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-};
 
 const products = [
     {
@@ -127,9 +106,83 @@ const products = [
         newPrice: '1.099.000₫',
         availability: 'Sẵn Sàng',
     },
+    {
+        id: 7,
+        image: sanpham2,
+        code: '123456',
+        name: 'Bàn Phím Laptop Asus UX534 Bạc Led',
+        oldPrice: '1.299.000₫',
+        discount: '15%',
+        newPrice: '1.099.000₫',
+        availability: 'Sẵn Sàng',
+    },
+    {
+        id: 8,
+        image: sanpham2,
+        code: '123456',
+        name: 'Bàn Phím Laptop Asus UX534 Bạc Led',
+        oldPrice: '1.299.000₫',
+        discount: '15%',
+        newPrice: '1.099.000₫',
+        availability: 'Sẵn Sàng',
+    },
+    {
+        id: 9,
+        image: sanpham2,
+        code: '123456',
+        name: 'Bàn Phím Laptop Asus UX534 Bạc Led',
+        oldPrice: '1.299.000₫',
+        discount: '15%',
+        newPrice: '1.099.000₫',
+        availability: 'Sẵn Sàng',
+    },
 ];
 
 const ItemCard: React.FC = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [totalSlides, setTotalSlides] = useState(products.length);
+
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 5,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        prevArrow: <CustomPrevArrow isHidden={currentSlide === 0} />,
+        nextArrow: <CustomNextArrow isHidden={currentSlide >= totalSlides - 5} />,
+        slidesToScroll: 5,
+        initialSlide: 0,
+        pauseOnHover: true,
+        beforeChange: (oldIndex: number, newIndex: number) => setCurrentSlide(newIndex),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
     return (
         <div className='itemcard'>
             <Slider {...settings}>

@@ -1,6 +1,8 @@
-import { FaDesktop, FaMobileAlt, FaTools, FaCogs, FaWrench, FaShieldAlt, FaRegNewspaper } from 'react-icons/fa'
+import { FaDesktop, FaMobileAlt, FaTools, FaCogs, FaWrench, FaShieldAlt, FaRegNewspaper } from 'react-icons/fa';
 import { MdBuild } from 'react-icons/md';
-import './HeaderBottom.scss'
+import './HeaderBottom.scss';
+import Dropdown from '../Dropdown/Dropdown';
+
 const HeaderBottom = () => {
     return (
         <div className='header-bottom'>
@@ -9,7 +11,9 @@ const HeaderBottom = () => {
                     <FaDesktop style={{ fontSize: '24px', color: 'white' }} />
                     <span>SỬA CHỮA LAPTOP</span>
                 </div>
-
+                <div className='dropdown-content' style={{ top: '100%', left: '-10px' }}>
+                    <Dropdown />
+                </div>
             </div>
 
             <div className='icon-header'>
@@ -17,7 +21,8 @@ const HeaderBottom = () => {
                     <FaMobileAlt style={{ fontSize: '24px', color: 'white' }} />
                     <span>SỬA CHỮA ĐIỆN THOẠI</span>
                 </div>
-                <div style={{ transform: 'translateX(-20px)' }}>
+                <div className='dropdown-content' style={{ top: '100%', left: '-190px', }}>
+                    <Dropdown />
                 </div>
             </div>
 
@@ -26,12 +31,18 @@ const HeaderBottom = () => {
                     <FaTools style={{ fontSize: '24px', color: 'white' }} />
                     <span>SỬA CHỮA LINH KIỆN</span>
                 </div>
+                <div className='dropdown-content' style={{ top: '100%', left: '-370px' }}>
+                    <Dropdown />
+                </div>
             </div>
 
             <div className='icon-header'>
                 <div className='icon-header-menu'>
                     <FaCogs style={{ fontSize: '24px', color: 'white' }} />
                     <span>THAY THẾ LINH KIỆN</span>
+                </div>
+                <div className='dropdown-content' style={{ top: '100%', left: '-540px' }}>
+                    <Dropdown />
                 </div>
             </div>
 
@@ -40,12 +51,18 @@ const HeaderBottom = () => {
                     <FaWrench style={{ fontSize: '24px', color: 'white' }} />
                     <span>THIẾT BỊ VĂN PHÒNG</span>
                 </div>
+                <div className='dropdown-content' style={{ top: '100%', left: '-710px' }}>
+                    <Dropdown />
+                </div>
             </div>
 
             <div className='icon-header'>
                 <div className='icon-header-menu'>
                     <MdBuild style={{ fontSize: '24px', color: 'white' }} />
                     <span>BẢO TRÌ BẢO DƯỠNG</span>
+                </div>
+                <div className='dropdown-content' style={{ top: '100%', left: '-885px' }}>
+                    <Dropdown />
                 </div>
             </div>
 
@@ -54,6 +71,9 @@ const HeaderBottom = () => {
                     <FaShieldAlt style={{ fontSize: '24px', color: 'white' }} />
                     <span>BẢO HÀNH MỞ RỘNG</span>
                 </div>
+                <div className='dropdown-content' style={{ top: '100%', left: '-1065px' }}>
+                    <Dropdown />
+                </div>
             </div>
 
             <div className='icon-header'>
@@ -61,9 +81,12 @@ const HeaderBottom = () => {
                     <FaRegNewspaper style={{ fontSize: '24px', color: 'white' }} />
                     <span>TIN CÔNG NGHỆ</span>
                 </div>
+                <div className='dropdown-content' style={{ top: '100%', left: '-1235px' }}>
+                    <Dropdown />
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default HeaderBottom;

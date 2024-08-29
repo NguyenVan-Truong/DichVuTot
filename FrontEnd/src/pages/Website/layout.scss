@@ -1,7 +1,7 @@
 // src/styles/container.scss
 
 .container {
-  max-width: 1350px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0px;
 }
@@ -16,5 +16,84 @@
 @media (max-width: 480px) {
   .container {
     padding: 10px;
+  }
+}
+
+.footerchart {
+  position: fixed;
+  bottom: 15px; /* Cố định ở đáy của trang */
+  right: 15px; /* Cố định ở bên phải của trang */
+  padding: 0px; /* Khoảng cách bên trong */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  .date {
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+  .face {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 10px;
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+    .facechat {
+      display: flex;
+      flex-direction: column;
+      .facetext {
+        font-weight: bolder;
+      }
+    }
+  }
+  .mess {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 10px;
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+    .messchat {
+      display: flex;
+      flex-direction: column;
+      .messtext {
+        font-weight: bolder;
+      }
+    }
+  }
+  .telephone {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 10px;
+    gap: 15px;
+    .telechat {
+      display: flex;
+      flex-direction: column;
+      .teletext {
+        font-weight: bolder;
+      }
+    }
   }
 }

@@ -3,32 +3,39 @@
   border-radius: 20px;
   border: 1px solid rgb(73, 66, 66);
   box-shadow: 1px 1px 8px 9px rgba(227, 225, 225, 0.79);
+
   .bottom-top {
-    display: flex;
-    position: relative;
+    display: flex; /* Thay đổi display thành flex */
+    // flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi cần thiết */
+    justify-content: center; /* Căn giữa các phần tử ngang */
+    align-items: center; /* Căn giữa các phần tử dọc */
+    width: 100%;
+    padding: 25px;
+
     .bottom-one {
-      margin-top: 25px;
-      margin-bottom: 25px;
       width: 150px;
-      margin-right: 5px;
+      margin: 10px; /* Thay đổi margin để có khoảng cách giữa các phần tử */
       text-align: center;
+
       span {
         font-size: 15px;
         font-weight: 900;
       }
+
       .bottom-icon {
         width: 120px;
         height: 100px;
         display: flex;
         align-items: center;
+        justify-content: center; /* Căn giữa nội dung bên trong */
         border-radius: 10px;
         background-color: bisque;
-        display: inline-block;
         transition: transform 0.3s ease;
-      }
-      .bottom-icon:hover {
-        transform: scale(0.8);
-        background-color: rgb(245, 179, 179);
+
+        &:hover {
+          transform: scale(0.8);
+          background-color: rgb(245, 179, 179);
+        }
       }
     }
   }
