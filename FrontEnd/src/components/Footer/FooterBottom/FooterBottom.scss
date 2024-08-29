@@ -3,6 +3,7 @@
   display: grid;
   margin-top: 15px;
   padding-top: 25px;
+  gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   .footerBottomOne {
     width: 320px;
@@ -23,6 +24,11 @@
       span {
         padding-bottom: 10px;
       }
+    }
+    .icon {
+      margin-left: 10px;
+      display: flex;
+      gap: 30px;
     }
   }
 }

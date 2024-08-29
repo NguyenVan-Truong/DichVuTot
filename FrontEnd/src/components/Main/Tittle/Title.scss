@@ -3,30 +3,45 @@
   margin-top: 10px;
   justify-content: space-between;
   .title-one {
-    font-weight: 300;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
     font-size: 20px;
     width: 250px;
     text-align: center;
     background-color: red;
     color: white;
-    padding: 10px;
+    width: 290px;
     border-top-right-radius: 20px;
+    .triangle {
+      top: 0px;
+      height: 20px;
+      transform-origin: 0 0;
+      border-left: 25px solid #bf0816;
+      border-right: 35px solid transparent;
+      border-bottom: 50px solid #bf0816;
+      margin-right: 15px;
+      position: relative;
+    }
   }
   .title-two {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+
     button {
-      padding: 2px;
-      margin: 2px;
-      border-radius: 5px;
+      background-color: whitesmoke;
+      color: black;
+      border: 1px solid rgb(230, 214, 214);
+      width: auto;
+      padding: 0.5em 1em; // Điều chỉnh padding nếu cần
+      white-space: nowrap;
     }
-    button:hover {
-      background-color: red;
-      color: white;
-      border: none;
-      font-size: 14px;
-    }
+  }
+
+  button:hover {
+    background-color: red;
+    color: white;
   }
 }

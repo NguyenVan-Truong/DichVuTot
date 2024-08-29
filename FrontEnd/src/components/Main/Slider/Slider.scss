@@ -3,11 +3,11 @@
   background-color: white;
   border-radius: 15px;
   .item {
-    border: 1px solid #e8e8e8;
+    border: 1px solid #c6bebe;
     border-radius: 15px;
-    margin: 10px;
+    margin: 5px;
     width: 200px;
-    height: 350px;
+    height: 370px;
     position: relative;
     .itemStar {
       display: flex;
@@ -20,12 +20,15 @@
       padding: 10px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 5px;
       .price {
         font-size: 25px;
         font-weight: bold;
       }
     }
+  }
+  .item:hover {
+    box-shadow: 0 0 10px 0 rgba(105, 105, 105, 0.396);
   }
 
   .slick-prev,

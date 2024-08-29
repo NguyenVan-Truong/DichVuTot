@@ -4,7 +4,10 @@ const TittleBottom = () => {
     return (
         <>
             <div className='title'>
-                <div className='title-one'>Sửa Chữa Linh Kiện</div>
+                <div className='title-one'>
+                    <div className='triangle'></div>
+                    Sửa Chữa Linh Kiện
+                </div>
             </div>
         </>
     )

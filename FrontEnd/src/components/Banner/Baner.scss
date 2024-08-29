@@ -2,9 +2,10 @@
   display: flex;
   z-index: 1;
   justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần */
-
+  margin-top: 10px;
+  margin-bottom: 10px;
   .banner-left {
-    width: 65%; /* Thay đổi từ pixel sang phần trăm */
+    width: 67%; /* Thay đổi từ pixel sang phần trăm */
     margin-top: 5px;
     margin-right: 5px;
     position: relative;
@@ -22,13 +23,15 @@
     &:hover {
       .slick-prev,
       .slick-next {
+        color: black;
+        background-color: aquamarine;
         opacity: 1;
       }
     }
   }
 
   .banner-right {
-    width: 32%; /* Thay đổi từ pixel sang phần trăm */
+    width: 39%; /* Thay đổi từ pixel sang phần trăm */
     display: flex;
     flex-direction: column;
     margin: 5px;
@@ -37,6 +40,10 @@
       width: 100%;
       border-radius: 20px;
     }
+  }
+  .slick-prev,
+  .slick-next {
+    display: none !important; /* Ẩn các nút điều hướng mặc định */
   }
 }
 

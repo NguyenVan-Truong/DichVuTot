@@ -1,5 +1,5 @@
 .itemcard {
-  width: 85%;
+  width: 87%;
   background-color: white;
   margin: 10px;
   border-radius: 15px;
@@ -9,7 +9,7 @@
     border-radius: 15px;
     margin: 5px;
     width: 220px;
-    height: 350px;
+    height: 380px;
 
     .itemStar {
       display: flex;
@@ -29,16 +29,21 @@
       }
     }
   }
+  .item:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
 }
+
 .slick-prev,
 .slick-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  border-radius: 50%;
-  width: 40px;
-  height: 25px;
+  padding: 10px;
+  width: 60px;
+  background-color: yellow;
+  // height: px;
   padding: 10px;
   display: flex;
   justify-content: center; /* Căn giữa theo chiều ngang */
@@ -52,18 +57,15 @@
 }
 
 .slick-prev {
-  left: 10px;
+  left: 0px;
+  color: black;
+  // padding: 25px;
 }
 
 .slick-next {
   right: 10px;
 }
 
-.slick-prev svg,
-.slick-next svg {
-  font-size: 20px;
-  color: white; /* Màu sắc của icon */
-}
 @media screen and (max-width: 1200px) {
   .itemcard {
     width: 1130px;

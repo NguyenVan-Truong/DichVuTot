@@ -1,10 +1,10 @@
 import './Header.scss'
 import logo from '../../assets/Images/logo.jpg'
-import dropdownContent from '../../assets/Images/dropdown1.png'
 import { FaBars, FaCogs, FaDesktop, FaMobileAlt, FaRegNewspaper, FaSearch, FaShieldAlt, FaShoppingCart, FaTools, FaUser, FaWrench } from 'react-icons/fa'
-import { MdBuild } from 'react-icons/md';
-import { Dropdown, Menu } from 'antd';
+import { Dropdown, Input, Menu } from 'antd';
 import HeaderBottom from './HeaderBottom/HeaderBottom';
+import { Button } from '@mantine/core';
+import { IconMenu2 } from '@tabler/icons-react';
 const Header = () => {
     const menu = (
         <Menu>
@@ -23,24 +23,27 @@ const Header = () => {
         <div className='header'>
             <div className='header-top'>
                 <img src={logo} alt="" />
-                <span className='category'><FaBars style={{ fontSize: '20px', color: 'white' }} />Danh mục</span>
-                <form action="">
-                    <input type="text" placeholder='Nhập tên sản phẩm , từ khoá cần tìm ' />
-                    <button className='search'>
+                <Button className='button' leftSection={<IconMenu2 size={22} />} variant="filled" size="xs" radius="md">Danh Mục</Button>
+                <form className="form">
+                    <Input className='input' placeholder="Nhập tên sản phẩm, từ khoá cần tìm" />
+                    <Button className='search'>
                         <FaSearch style={{ fontSize: '15px', color: 'white' }} />
-                    </button>
+                    </Button>
                 </form>
+
                 {/* <span className='cart'><FaShoppingCart style={{ fontSize: '15px', color: 'white' }} /> Giỏ hàng</span> */}
                 <Dropdown overlay={menu} trigger={['click']}>
-                    <span className='cart'>
-                        <FaShoppingCart style={{ fontSize: '15px', color: 'white' }} /> Giỏ hàng
-                    </span>
+                    <Button className='button' variant="filled" size="xs" radius="md" leftSection={<FaShoppingCart size={20} />} >
+                        Giỏ hàng
+                    </Button>
                 </Dropdown>
-                <span className='user'><FaUser style={{ fontSize: '15px', color: 'white' }} />Đăng nhập</span>
+                <Button style={{ backgroundColor: '#2D2C74', fontWeight: 'bold' }} variant="filled" size="xs" radius="md" leftSection={<FaUser size={15} />}>
+                    Đăng Nhập
+                </Button>
+
             </div>
             <HeaderBottom />
         </div>
-
     )
 }
 

@@ -1,24 +1,26 @@
 .header-bottom {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
   background-color: red;
-  justify-content: space-between;
   position: sticky;
   .icon-header {
     margin: 10px;
     position: relative;
     display: inline-block;
     .icon-header-menu {
+      font-weight: bolder;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
+      gap: 3px;
+      white-space: nowrap;
     }
     .custom-dropdown {
       margin-left: -153px;
     }
     .custom-dropdown-one {
-      margin-left: -10px;
+      margin-left: -15px;
     }
     .dropdown-content {
       display: none;
