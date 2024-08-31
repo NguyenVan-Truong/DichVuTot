@@ -2,19 +2,19 @@
   display: flex;
   margin-top: 10px;
   justify-content: space-between;
+
   .title-one {
     display: flex;
     align-items: center;
     font-weight: bolder;
     font-size: 20px;
-    width: 250px;
+    width: 290px; // Điều chỉnh kích thước nếu cần
     text-align: center;
-    background-color: red;
+    background-color: #ed1b24;
     color: white;
-    width: 290px;
     border-top-right-radius: 20px;
+
     .triangle {
-      top: 0px;
       height: 20px;
       transform-origin: 0 0;
       border-left: 25px solid #bf0816;
@@ -24,24 +24,51 @@
       position: relative;
     }
   }
+
   .title-two {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
+    flex-wrap: wrap; // Đảm bảo các nút có thể xuống dòng nếu cần
 
-    button {
-      background-color: whitesmoke;
-      color: black;
-      border: 1px solid rgb(230, 214, 214);
-      width: auto;
-      padding: 0.5em 1em; // Điều chỉnh padding nếu cần
-      white-space: nowrap;
+    // Ẩn tất cả các nút khi màn hình nhỏ hơn 1200px
+    @media screen and (max-width: 1200px) {
+      button {
+        display: none;
+      }
+
+      .show-all-button {
+        display: block;
+      }
     }
   }
 
-  button:hover {
-    background-color: red;
-    color: white;
+  button {
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid rgb(230, 214, 214);
+    padding: 0.5em 1em; // Điều chỉnh padding nếu cần
+    white-space: nowrap;
+
+    &:hover {
+      background-color: #ed1b24;
+      color: white;
+    }
+  }
+
+  // Hiển thị nút "Xem Tất cả" khi màn hình nhỏ hơn 1200px
+  .show-all-button {
+    display: none; // Mặc định ẩn
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid rgb(230, 214, 214);
+    padding: 0.5em 1em; // Điều chỉnh padding nếu cần
+    white-space: nowrap;
+
+    &:hover {
+      background-color: red;
+      color: white;
+    }
   }
 }

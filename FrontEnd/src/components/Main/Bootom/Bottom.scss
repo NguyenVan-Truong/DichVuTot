@@ -5,21 +5,22 @@
   box-shadow: 1px 1px 8px 9px rgba(227, 225, 225, 0.79);
 
   .bottom-top {
-    display: flex; /* Thay đổi display thành flex */
-    // flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi cần thiết */
-    justify-content: center; /* Căn giữa các phần tử ngang */
-    align-items: center; /* Căn giữa các phần tử dọc */
+    display: flex;
+    flex-wrap: nowrap; /* Ngăn chặn việc xuống dòng */
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    scrollbar-width: none; /* Ẩn thanh cuộn ngang trên Firefox */
+    -ms-overflow-style: none; /* Ẩn thanh cuộn ngang trên IE và Edge */
     width: 100%;
     padding: 25px;
 
     .bottom-one {
       width: 150px;
-      margin: 10px; /* Thay đổi margin để có khoảng cách giữa các phần tử */
+      margin: 10px;
       text-align: center;
 
       span {
         font-size: 15px;
-        font-weight: 900;
+        font-weight: 700;
       }
 
       .bottom-icon {
@@ -27,16 +28,21 @@
         height: 100px;
         display: flex;
         align-items: center;
-        justify-content: center; /* Căn giữa nội dung bên trong */
+        justify-content: center;
         border-radius: 10px;
-        background-color: bisque;
+        background-color: #f1eeeb;
         transition: transform 0.3s ease;
 
         &:hover {
           transform: scale(0.8);
-          background-color: rgb(245, 179, 179);
+          background-color: #fcd5d7;
         }
       }
     }
+  }
+
+  /* Ẩn thanh cuộn ngang trên Chrome, Safari, và Opera */
+  .bottom-top::-webkit-scrollbar {
+    display: none;
   }
 }

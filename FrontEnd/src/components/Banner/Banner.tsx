@@ -17,7 +17,7 @@ const CustomPrevArrow: React.FC<{ className?: string; style?: React.CSSPropertie
         onClick={props.onClick}
         style={{ ...props.style, display: props.hidden ? 'none' : 'block' }}
     >
-        <FaChevronLeft style={{ color: 'black', fontSize: '30px', marginLeft: '10px', marginTop: '20px' }} />
+        <FaChevronLeft style={{ color: 'black', fontSize: '30px', marginLeft: '20px', marginTop: '20px' }} />
     </div>
 );
 

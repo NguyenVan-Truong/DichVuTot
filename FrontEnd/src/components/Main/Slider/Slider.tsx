@@ -144,21 +144,39 @@ const SliderMain: React.FC = () => {
 
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
-        slidesToShow: 6,
+        slidesToShow: 6, // Hiển thị 6 item mặc định
+        slidesToScroll: 1, // Cuộn 1 item mỗi lần
         prevArrow: <CustomPrevArrow isHidden={currentSlide === 0} />,
-        nextArrow: <CustomNextArrow isHidden={currentSlide >= totalSlides - 5} />,
-        slidesToScroll: 6,
-        initialSlide: 0,
+        nextArrow: <CustomNextArrow isHidden={currentSlide >= totalSlides - 6} />,
         pauseOnHover: true,
         beforeChange: (oldIndex: number, newIndex: number) => setCurrentSlide(newIndex),
         responsive: [
             {
+                breakpoint: 1400, // Đối với màn hình có độ rộng khoảng 1200px
+                settings: {
+                    slidesToShow: 5, // Hiển thị 4 item
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+
+            {
+                breakpoint: 1200, // Đối với màn hình có độ rộng khoảng 1200px
+                settings: {
+                    slidesToShow: 4, // Hiển thị 4 item
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
@@ -167,7 +185,7 @@ const SliderMain: React.FC = () => {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                     initialSlide: 2
                 }
             },
@@ -181,13 +199,15 @@ const SliderMain: React.FC = () => {
         ]
     };
 
+
+
     return (
         <div className='main' >
             <Slider {...settings}>
                 {products.map(product => (
                     <div key={product.id}>
                         <div className='item'>
-                            <img src={product.image} alt={product.name} width={135} style={{ marginLeft: '35px' }} />
+                            <img src={product.image} alt={product.name} />
                             <div className='itemStar'>
                                 <div style={{ color: 'gold', fontSize: '12px' }}>
                                     {[...Array(5)].map((_, index) => (

@@ -2,42 +2,49 @@ import React from 'react'
 import master from '../../../assets/Images/master.png'
 import visa from '../../../assets/Images/visa.png'
 import vnpay from '../../../assets/Images/vnpay.png'
+import atm from '../../../assets/Images/atm.png'
 import './FooterTop.scss'
 const FooterTop = () => {
     return (
         <>
             <div className='footer'>
                 <div>
-                    <h3>THÔNG TIN CÔNG TY</h3>
-                    <p>Giới thiếu công ty</p>
-                    <p>Tin tức công nghệ</p>
-                    <p>Thông tin liên hệ </p>
+                    <p>THÔNG TIN CÔNG TY</p>
+                    <span>Giới thiếu công ty</span>
+                    <span>Tin tức công nghệ</span>
+                    <span>Thông tin liên hệ </span>
                 </div>
                 <div>
-                    <h3>HỖ TRỢ KHÁCH HÀNG</h3>
-                    <p>Hướng dẫn đặt lịch</p>
-                    <p>Chính sách trả gớp</p>
-                    <p>Yêu cầu báo giá </p>
+                    <p>HỖ TRỢ KHÁCH HÀNG</p>
+                    <span>Hướng dẫn đặt lịch</span>
+                    <span>Chính sách trả gớp</span>
+                    <span>Yêu cầu báo giá </span>
                 </div>
                 <div>
-                    <h3>CHÍNH SÁCH CHUNG</h3>
-                    <p>Chính sách bảo mật</p>
-                    <p>Chính sách bảo hành</p>
-                    <p>Thông tin vận chuyển</p>
+                    <p>CHÍNH SÁCH CHUNG</p>
+                    <span>Chính sách bảo mật</span>
+                    <span>Chính sách bảo hành</span>
+                    <span>Thông tin vận chuyển</span>
                 </div>
                 <div>
-                    <h3>THÔNG TIN KHÁC</h3>
-                    <p>Tổng đài hỗ trợ miễn phí</p>
-                    <p>(Gớp ý - Sửa chữa - Bảo hành)</p>
-                    <p>1800 8091 (8:30 - 19:00)</p>
-                    <p>Email: info@dichvutot.vn</p>
+                    <p>THÔNG TIN KHÁC</p>
+                    <span>Tổng đài hỗ trợ miễn phí</span>
+                    <span>(Gớp ý - Sửa chữa - Bảo hành)</span>
+                    <span>1800 8091 (8:30 - 19:00)</span>
+                    <span>Email: info@dichvutot.vn</span>
                 </div>
                 <div>
-                    <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+                    <p>PHƯƠNG THỨC THANH TOÁN</p>
                     <div className='image-cart'>
-                        <img src={master} alt="" width={150} />
-                        <div><img src={visa} alt="" width={100} /></div>
-                        <img src={vnpay} alt="" width={150} />
+                        <div className='imageone'>
+                            <img src={master} alt="" />
+                        </div>
+                        <div className='imageone'>
+                            <img src={visa} alt="" />
+                        </div>
+                        <div className='imageone'>
+                            <img src={vnpay} alt="" />
+                        </div>
                     </div>
                 </div>
             </div>

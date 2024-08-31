@@ -157,6 +157,15 @@ const ItemCard: React.FC = () => {
         beforeChange: (oldIndex: number, newIndex: number) => setCurrentSlide(newIndex),
         responsive: [
             {
+                breakpoint: 1204,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
@@ -184,12 +193,12 @@ const ItemCard: React.FC = () => {
     };
 
     return (
-        <div className='itemcard'>
+        <div className='mainSlide' >
             <Slider {...settings}>
                 {products.map(product => (
                     <div key={product.id}>
                         <div className='item'>
-                            <img src={product.image} alt={product.name} width={150} style={{ marginLeft: '35px' }} />
+                            <img src={product.image} alt={product.name} />
                             <div className='itemStar'>
                                 <div style={{ color: 'gold', fontSize: '12px' }}>
                                     {[...Array(5)].map((_, index) => (

@@ -1,28 +1,30 @@
 .bannerSlider {
   display: flex;
-  background: red;
+  background: #ed1b24;
   gap: 15px;
   border-radius: 15px;
   justify-content: space-between;
-  .bannerLeft {
-    width: 9%;
-    font-weight: bolder;
-    font-size: 45px;
-    display: flex;
-    margin-left: 23px;
-    text-align: center;
-    align-items: center;
-    color: white;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 8px 8px 16px rgba(0, 0, 0, 0.3),
-      12px 12px 24px rgba(0, 0, 0, 0.2);
-  }
+  align-items: center; // Đảm bảo căn chỉnh giữa các phần tử
+}
+
+.bannerLeft {
+  width: 9%;
+  font-weight: bolder;
+  font-size: 45px;
+  display: flex;
+  margin-left: 23px;
+  text-align: center;
+  align-items: center;
+  color: white;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 8px 8px 16px rgba(0, 0, 0, 0.3),
+    12px 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 1200px) {
   .bannerSlider {
-    gap: 1px;
+    gap: 1px; // Giảm khoảng cách giữa các phần tử
   }
   .bannerLeft {
-    display: none;
+    display: none; // Ẩn phần tử khi màn hình nhỏ hơn 1200px
   }
 }

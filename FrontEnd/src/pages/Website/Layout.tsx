@@ -13,34 +13,35 @@ const Layout = () => {
                 <main>
                     <Outlet />
                 </main>
+                <div className='footerchart'>
+                    <div className='date'>
+                        <FaCalendarAlt style={{ color: 'white', fontSize: '30px' }} />
+                        <span>Đặt Lịch</span>
+                    </div>
+                    <div className='face'>
+                        <img src={mess} alt="" />
+                        <div className='facechat'>
+                            <span className='facetext'>Chat Facebook</span>
+                            <span>(8h30-19h)</span>
+                        </div>
+                    </div>
+                    <div className='mess'>
+                        <img src={zalo} alt="" />
+                        <div className='messchat'>
+                            <span className='messtext'>Chat Zalo</span>
+                            <span>(8h30-19h)</span>
+                        </div>
+                    </div>
+                    <div className='telephone'>
+                        <FaPhoneAlt style={{ color: 'red', fontSize: '30px' }} />
+                        <div className='telechat'>
+                            <span className='teletext'>1900 1903</span>
+                            <span>(8h30-19h)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className='footerchart'>
-                <div className='date'>
-                    <FaCalendarAlt style={{ color: 'white', fontSize: '24px' }} />
-                    <span>Ngày tháng</span>
-                </div>
-                <div className='face'>
-                    <img src={mess} alt="" />
-                    <div className='facechat'>
-                        <span className='facetext'>Chat Facebook</span>
-                        <span>(8h30-19h)</span>
-                    </div>
-                </div>
-                <div className='mess'>
-                    <img src={zalo} alt="" />
-                    <div className='messchat'>
-                        <span className='messtext'>Chat Zalo</span>
-                        <span>(8h30-19h)</span>
-                    </div>
-                </div>
-                <div className='telephone'>
-                    <FaPhoneAlt style={{ color: 'red', fontSize: '40px' }} />
-                    <div className='telechat'>
-                        <span className='teletext'>1900 1903</span>
-                        <span>(8h30-19h)</span>
-                    </div>
-                </div>
-            </div>
+
         </>
     )
 }

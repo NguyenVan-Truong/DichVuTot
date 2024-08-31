@@ -1,64 +1,85 @@
 .main {
-  width: 100%;
+  width: 99%;
   background-color: white;
   border-radius: 15px;
-  gap: 15px;
+  margin: 5px;
+  overflow: hidden; // Ẩn các item nằm ngoài vùng nhìn thấy
+
   .item {
     border: 1px solid #c6bebe;
     border-radius: 15px;
-    width: 225px;
-    height: 370px;
-    margin-top: 15px;
+    width: 100%; // Điều chỉnh kích thước của item để phù hợp với kích thước của slider
+    max-width: 225px; // Giới hạn kích thước tối đa của item
+    height: 380px;
+    // margin-top: 15px;
+    margin: 5px;
     position: relative;
+
+    img {
+      border-radius: 20px;
+      width: 100%;
+      height: 200px;
+    }
+
     .itemStar {
       display: flex;
-      margin-top: 5px;
+      margin-top: 2px;
+      align-items: center;
       justify-content: space-between;
       padding: 0 10px;
     }
+
     .description {
       text-align: left;
       padding: 10px;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+
+      span {
+        font-size: 15px;
+      }
+
       .price {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bold;
       }
     }
   }
+
   .item:hover {
     box-shadow: 0 0 10px 0 rgba(105, 105, 105, 0.396);
   }
 
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+  }
+
   .slick-prev {
-    background-color: gray;
+    left: 5px;
+    background-color: #f1f1f1;
     border-top-right-radius: 35%;
     border-bottom-right-radius: 35%;
     width: 40px;
     height: 65px;
     position: absolute;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
-    margin-left: -5px;
     &:hover {
       background-color: red;
     }
   }
 
   .slick-next {
-    background-color: gray;
+    right: 1px;
+    background-color: #f1f1f1;
     border-top-left-radius: 35%;
     border-bottom-left-radius: 35%;
     width: 40px;
     height: 65px;
     position: absolute;
-    top: 55%;
-    margin-right: -5px;
+    top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
     &:hover {
       background-color: red;
     }
@@ -66,20 +87,12 @@
 
   .slick-prev::before,
   .slick-next::before {
-    content: none; /* Ẩn icon mặc định của react-slick */
-  }
-
-  .slick-prev {
-    left: 10px;
-  }
-
-  .slick-next {
-    right: 10px;
+    content: none; // Ẩn icon mặc định của react-slick
   }
 
   .slick-prev svg,
   .slick-next svg {
     font-size: 20px;
-    color: white; /* Màu sắc của icon */
+    color: white; // Màu sắc của icon
   }
 }
