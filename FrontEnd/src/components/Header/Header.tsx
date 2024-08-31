@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
@@ -8,18 +7,23 @@ import { Dropdown, Menu } from 'antd';
 import logo from "../../assets/Images/logo.jpg";
 import { navItems } from "./components/DataItem";
 import { Button, Input } from "@mantine/core";
+
 const Header = () => {
     const menu = (
         <Menu>
             <Menu.Item key="0">
                 <div className='cart-dropdown'>
                     <h3>Giỏ hàng của bạn</h3>
-
                 </div>
             </Menu.Item>
-            {/* <Menu.Item key="1">
-                <img src={dropdownContent} alt="" width={300} style={{ padding: '15px', borderRadius: '40px' }} />
-            </Menu.Item> */}
+        </Menu>
+    );
+
+    const searchMenu = (
+        <Menu>
+            <Menu.Item key="1">Sản phẩm gợi ý 1</Menu.Item>
+            <Menu.Item key="2">Sản phẩm gợi ý 2</Menu.Item>
+            <Menu.Item key="3">Sản phẩm gợi ý 3</Menu.Item>
         </Menu>
     );
 
@@ -29,10 +33,11 @@ const Header = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
     const handleMenuToggle = () => {
         setIsMenuMobileOpen(!isMenuMobileOpen);
     };
-    // console.log("isMenuMobileOpen", isMenuMobileOpen);
+
     return (
         <>
             <header className="">
@@ -55,12 +60,18 @@ const Header = () => {
                                 </Button>
                             </div>
                             {/* form seach */}
-                            <form className="form">
-                                <Input className='input' placeholder="Nhập tên sản phẩm, từ khoá cần tìm" />
-                                <Button className='search'>
-                                    <FaSearch style={{ fontSize: '15px', color: 'white' }} />
-                                </Button>
-                            </form>
+                            <Dropdown overlay={searchMenu} trigger={['click']}>
+                                <form className="form">
+                                    <Input
+                                        className='input'
+                                        placeholder="Nhập tên sản phẩm, từ khoá cần tìm"
+                                        onFocus={toggleMenu}
+                                    />
+                                    <Button className='search'>
+                                        <FaSearch style={{ fontSize: '15px', color: 'white' }} />
+                                    </Button>
+                                </form>
+                            </Dropdown>
                             {/* button-giỏ hàng */}
                             <Dropdown overlay={menu} trigger={['click']}>
                                 <div className="header__cart">
@@ -77,22 +88,24 @@ const Header = () => {
                     <div className="header__center">
                         {/* form tìm kiếm online */}
                         <div className="header__inputSeach">
-                            <form action="">
-                                <input
-                                    type="text"
-                                    placeholder="Nhập tên sản phẩm, từ khóa cần tìm"
-                                    className=""
-                                />
-                                <Button>
-                                    <CiSearch className="header__inputSeach-icon" />
-                                </Button>
-                            </form>
+                            <Dropdown overlay={searchMenu} trigger={['click']}>
+                                <form action="">
+                                    <input
+                                        type="text"
+                                        placeholder="Nhập tên sản phẩm, từ khóa cần tìm"
+                                        onFocus={toggleMenu}
+                                    />
+                                    <Button>
+                                        <CiSearch className="header__inputSeach-icon" />
+                                    </Button>
+                                </form>
+                            </Dropdown>
                         </div>
                         {/* end form tìm kiếm online */}
 
                         {/*Start nav deskop */}
                         <div
-                            className={`header__nav ${isMenuMobileOpen == true ? "show" : "hide"}`}
+                            className={`header__nav ${isMenuMobileOpen ? "show" : "hide"}`}
                         >
                             {navItems.map((item: any, index: number) => (
                                 <div className="header__nav-item" key={index}>
@@ -125,13 +138,13 @@ const Header = () => {
                         {/*End nav deskop */}
                         {/* subMenuMobile */}
                         <div
-                            className={`sub__menu_mobile ${isMenuMobileOpen == true ? "show" : "hide"}`}
+                            className={`sub__menu_mobile ${isMenuMobileOpen ? "show" : "hide"}`}
                         >
                             <h3>Sửa chữa Laptop</h3>
-                            <Button >Sửa Main Laptop</Button >
-                            <Button >Sửa Main Laptop</Button >
-                            <Button >Sửa Main Laptop</Button >
-                            <Button >Sửa Main Laptop</Button >
+                            <Button>Sửa Main Laptop</Button>
+                            <Button>Sửa Main Laptop</Button>
+                            <Button>Sửa Main Laptop</Button>
+                            <Button>Sửa Main Laptop</Button>
                         </div>
                         {/* endsubMobile */}
                     </div>

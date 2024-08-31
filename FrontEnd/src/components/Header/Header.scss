@@ -355,21 +355,24 @@ header {
 
         ul {
           list-style: none;
-          padding: 0; // Loại bỏ khoảng cách bên trong của ul
+          padding: 0; /* Loại bỏ khoảng cách bên trong của ul */
           margin: 0;
+
           li {
             padding: 5px 0;
             margin-bottom: 5px;
             font-weight: 400;
             font-size: 14px;
             color: #000;
+
             a {
               text-decoration: none;
               color: #000;
+
+              &:hover {
+                color: red;
+              }
             }
-          }
-          li:hover {
-            color: red;
           }
         }
       }
